@@ -70,6 +70,9 @@ zinit wait lucid light-mode for \
         OMZ::plugins/brew/brew.plugin.zsh \
         OMZ::plugins/terraform/terraform.plugin.zsh \
     atload'pyenv global 3.8.2' \
+    atload'CERT_PATH=$(python -m certifi)' \
+    atload'export SSL_CERT_FILE=${CERT_PATH}' \
+    atload'export REQUESTS_CA_BUNDLE=${CERT_PATH}' \
         OMZ::plugins/pyenv/pyenv.plugin.zsh \
     atload'chruby ruby-2.6.5' \
         OMZ::plugins/chruby/chruby.plugin.zsh \
