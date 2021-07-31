@@ -5,12 +5,11 @@ if [ -f '/Users/paulboocock/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/pau
 if [ -f '/Users/paulboocock/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/paulboocock/google-cloud-sdk/completion.zsh.inc'; fi
 
 # Aliases
-alias tf=terraform
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 # default java version
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8.0)
-export JAVA_HOME=$(/usr/libexec/java_home -v 11.0.5)
+#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
+export JAVA_HOME=$(/usr/libexec/java_home -v 11)
 
 # Path updates
 export PATH=~/bin:$PATH

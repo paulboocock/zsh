@@ -38,10 +38,8 @@ zinit wait lucid for \
     atload"unalias grv" \
         OMZP::git
 
-zinit ice pick"async.zsh" src"dracula.zsh-theme"
-zinit wait'!' lucid for \
-    OMZL::prompt_info_functions.zsh \
-    dracula/zsh
+zinit ice pick"async.zsh" src"pure.zsh" # with zsh-async library that's bundled with it.
+zinit light sindresorhus/pure
 
 zinit wait lucid light-mode for \
         OMZ::lib/compfix.zsh \
@@ -69,7 +67,7 @@ zinit wait lucid light-mode for \
         OMZ::plugins/vscode/vscode.plugin.zsh \
         OMZ::plugins/brew/brew.plugin.zsh \
         OMZ::plugins/terraform/terraform.plugin.zsh \
-    atload'pyenv global 3.8.2' \
+    atload'pyenv global 3.9.6' \
         OMZ::plugins/pyenv/pyenv.plugin.zsh \
     atload'chruby ruby-2.6.5' \
         OMZ::plugins/chruby/chruby.plugin.zsh \
