@@ -7,10 +7,6 @@ if [ -f '/Users/paulboocock/google-cloud-sdk/completion.zsh.inc' ]; then . '/Use
 # Aliases
 alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 
-# default java version
-#export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)
-export JAVA_HOME=$(/usr/libexec/java_home -v 11)
-
 # Path updates
 export PATH=~/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
