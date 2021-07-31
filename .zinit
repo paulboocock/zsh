@@ -31,8 +31,6 @@ setopt auto_param_slash         # If Completed Parameter Is A Directory, Add A T
 setopt no_complete_aliases
 setopt promptsubst
 
-PS1=""
-
 zinit wait lucid for \
         OMZL::git.zsh \
     atload"unalias grv" \
