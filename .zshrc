@@ -22,6 +22,8 @@ DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 source "$DOTFILES_DIR/.zinit"
 
+[[ -s "/Users/paulboocock/.gvm/scripts/gvm" ]] && source "/Users/paulboocock/.gvm/scripts/gvm"
+
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/paulboocock/.sdkman"
 [[ -s "/Users/paulboocock/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/paulboocock/.sdkman/bin/sdkman-init.sh"
