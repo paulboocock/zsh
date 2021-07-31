@@ -15,12 +15,17 @@ export JAVA_HOME=$(/usr/libexec/java_home -v 11.0.5)
 # Path updates
 export PATH=~/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
-export PATH=~/bin/apache-maven-3.6.3/bin:$PATH
-export PATH=/Users/paulboocock/.local/bin:$PATH
 export PATH=~/go/bin:$PATH
-export PATH=~/bin/flutter/bin:$PATH
 
-source "$HOME/Source/zsh/.zinit"
+SOURCE=${(%):-%N}
+while [ -h "$SOURCE" ]; do
+  DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+  SOURCE="$(readlink "$SOURCE")"
+  [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+source "$DOTFILES_DIR/.zinit"
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/paulboocock/.sdkman"
