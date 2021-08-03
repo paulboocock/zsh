@@ -22,6 +22,14 @@ DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 source "$DOTFILES_DIR/.zinit"
 
+export PATH="/usr/local/bin:$PATH"
+
+if [ -f $HOME/.nvm/nvm.sh ]
+then
+  . $HOME/.nvm/nvm.sh
+  export PATH="$HOME/.nvm/versions/node/$(nvm current)/bin:$PATH"
+fi
+
 [[ -s "/Users/paulboocock/.gvm/scripts/gvm" ]] && source "/Users/paulboocock/.gvm/scripts/gvm"
 
 # THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
