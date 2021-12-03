@@ -11,6 +11,10 @@ alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 export PATH=~/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/go/bin:$PATH
+export PATH="/usr/local/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 
 SOURCE=${(%):-%N}
 while [ -h "$SOURCE" ]; do
@@ -21,14 +25,6 @@ done
 DOTFILES_DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 source "$DOTFILES_DIR/.zinit"
-
-export PATH="/usr/local/bin:$PATH"
-
-if [ -f $HOME/.nvm/nvm.sh ]
-then
-  . $HOME/.nvm/nvm.sh
-  export PATH="$HOME/.nvm/versions/node/$(nvm current)/bin:$PATH"
-fi
 
 [[ -s "/Users/paulboocock/.gvm/scripts/gvm" ]] && source "/Users/paulboocock/.gvm/scripts/gvm"
 
