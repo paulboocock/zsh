@@ -69,7 +69,7 @@ zinit wait lucid light-mode for \
         OMZ::plugins/pyenv/pyenv.plugin.zsh \
     atload'chruby ruby-2.6.5' \
         OMZ::plugins/chruby/chruby.plugin.zsh \
-    atload'nvm use 12 --lts --silent' \
+    atload'nvm use default --silent' \
         OMZ::plugins/nvm/nvm.plugin.zsh 
 
 # Recommended Be Loaded Last.
