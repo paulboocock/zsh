@@ -44,7 +44,6 @@ zinit wait lucid light-mode for \
         OMZ::lib/completion.zsh \
         OMZ::lib/functions.zsh \
         OMZ::lib/diagnostics.zsh \
-        OMZ::lib/git.zsh \
         OMZ::lib/grep.zsh \
         OMZ::lib/key-bindings.zsh \
         OMZ::lib/misc.zsh \
@@ -65,11 +64,10 @@ zinit wait lucid light-mode for \
         OMZ::plugins/vscode/vscode.plugin.zsh \
         OMZ::plugins/brew/brew.plugin.zsh \
         OMZ::plugins/terraform/terraform.plugin.zsh \
-    atload'pyenv global 3.9.6' \
         OMZ::plugins/pyenv/pyenv.plugin.zsh \
     atload'chruby ruby-2.6.5' \
         OMZ::plugins/chruby/chruby.plugin.zsh \
-    atload'nvm use default --silent' \
+    atinit'export NVM_LAZY=1' \
         OMZ::plugins/nvm/nvm.plugin.zsh 
 
 # Recommended Be Loaded Last.
