@@ -11,9 +11,9 @@ alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 export PATH=~/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export PATH=~/go/bin:$PATH
-export PATH="/usr/local/bin:$PATH"
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
+export PATH=~/flutter/bin:$PATH
+export PATH=/usr/local/bin:$PATH
+export PATH="$HOME/.pyenv/bin:$PATH"
 eval "$(pyenv init --path)"
 
 SOURCE=${(%):-%N}
