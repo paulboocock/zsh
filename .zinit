@@ -49,7 +49,6 @@ zinit wait lucid light-mode for \
         OMZ::lib/misc.zsh \
         OMZ::lib/spectrum.zsh \
         OMZ::lib/termsupport.zsh \
-        OMZ::lib/nvm.zsh \
         OMZ::lib/directories.zsh \
     atinit"zicompinit; zicdreplay" \
         zdharma-continuum/fast-syntax-highlighting \
@@ -60,29 +59,10 @@ zinit wait lucid light-mode for \
         OMZ::plugins/git-auto-fetch/git-auto-fetch.plugin.zsh \
     as"completion" \
         OMZ::plugins/docker/_docker \
-        OMZ::plugins/thefuck/thefuck.plugin.zsh \
         OMZ::plugins/vscode/vscode.plugin.zsh \
         OMZ::plugins/brew/brew.plugin.zsh \
         OMZ::plugins/terraform/terraform.plugin.zsh \
-        OMZ::plugins/pyenv/pyenv.plugin.zsh \
-    atload'chruby ruby-2.6.5' \
-        OMZ::plugins/chruby/chruby.plugin.zsh \
-    atinit'export NVM_LAZY=1' \
-        OMZ::plugins/nvm/nvm.plugin.zsh 
-
-declare -a NODE_GLOBALS=(`find ~/.nvm/versions/node -maxdepth 3 -type l -wholename '*/bin/*' | xargs -n1 basename | sort | uniq`)
-
-NODE_GLOBALS+=("node")
-NODE_GLOBALS+=("nvm")
-
-load_nvm () {
-    export NVM_DIR=~/.nvm
-    [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-}
-
-for cmd in "${NODE_GLOBALS[@]}"; do
-    eval "${cmd}(){ unset -f ${NODE_GLOBALS}; load_nvm; ${cmd} \$@ }"
-done
+        OMZ::plugins/pyenv/pyenv.plugin.zsh 
 
 # Recommended Be Loaded Last.
 zinit ice wait blockf lucid atpull'zinit creinstall -q .'
