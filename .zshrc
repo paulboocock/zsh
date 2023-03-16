@@ -3,6 +3,7 @@ alias uuidgen='uuidgen | tr "[:upper:]" "[:lower:]"'
 
 # Path updates
 export PATH=~/bin:$PATH
+export PATH=~/go/bin:$PATH
 export PATH=~/.npm-global/bin:$PATH
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.pyenv/bin:$PATH"
@@ -20,4 +21,6 @@ source "$DOTFILES_DIR/.zinit"
 
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-[[ -s "/Users/paulboocock/.gvm/scripts/gvm" ]] && source "/Users/paulboocock/.gvm/scripts/gvm"
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+alias go="go1.19.7"
